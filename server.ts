@@ -1,5 +1,5 @@
 /**
- * Importing necessary modules and setting up the server instance.
+ * Importa i moduli e imposta il server.
  */
 import express, { Request, Response } from 'express';
 import { swaggerDocs } from './swagger.js';
@@ -12,10 +12,10 @@ const port = process.env.PORT || 3000;
 const redisClient = new Redis();
 
 /**
- * Function to fetch posts from the WordPress API.
+ * Funzione per recuperare i post dall'API di WordPress.
  * 
- * @returns {Promise<any[]>} An array containing the fetched posts.
- * @throws {Error} If there is an error fetching the posts.
+ * @returns {Promise<any[]>} Un array contenente i post recuperati.
+ * @throws {Error} Se si verifica un errore durante il recupero dei post.
  */
 
 const fetchPosts = async () => {
