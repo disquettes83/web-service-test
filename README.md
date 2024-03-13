@@ -10,16 +10,16 @@ Questo è un progetto di web service sviluppato in Node.js utilizzando TypeScrip
 - npm
 
 ## Installazione
-1. Clona il repository sul tuo computer:
+1. Clona il repository sul tuo computer:  
    git clone https://github.com/disquettes83/web-service-test.git
 
-3. Entra nella directory del progetto:
+3. Entra nella directory del progetto:  
    cd web-service
 
-3. Installa le dipendenze del progetto:
+3. Installa le dipendenze del progetto:  
    npm install
 
-5. Avvia il server:
+5. Avvia il server:  
    npm start
 
 
