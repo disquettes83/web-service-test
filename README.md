@@ -30,5 +30,15 @@ Questo è un progetto di web service sviluppato in Node.js utilizzando TypeScrip
 - **GET /posts**: Recupera tutti i post.
 - **GET /posts-filtered**: Recupera i post filtrati per titolo e numero.
 
+### Esempi
+1. **Recupero di tutti i post:**
+   - Per recuperare tutti i post, fai una richiesta GET a `/posts`.
+     http://localhost:3000/posts
+
+2. **Filtraggio dei post per titolo e numero:**
+   - Per filtrare i post in base al titolo e al numero massimo di post da restituire, fai una richiesta GET a `/posts-filtered` con i parametri `title` e `items`. Ad esempio:
+     - `/posts-filtered?title=esempio&items=5` restituirà i primi 5 post che contengono "esempio" nel titolo.
+
+
 ## Configurazione
 - Il server utilizza Redis come sistema di cache. Assicurati che Redis sia installato e in esecuzione sul tuo sistema.
