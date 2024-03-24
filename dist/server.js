@@ -1,4 +1,6 @@
-// server.ts
+/**
+ * Importa i moduli e imposta il server.
+ */
 import express from 'express';
 import { swaggerDocs } from './swagger.js';
 import axios from 'axios';
@@ -6,7 +8,12 @@ import { Redis } from 'ioredis';
 const app = express();
 const port = process.env.PORT || 3000;
 const redisClient = new Redis();
-// Fetch data from the WordPress API
+/**
+ * Funzione per recuperare i post dall'API di WordPress.
+ *
+ * @returns {Promise<any[]>} Un array contenente i post recuperati.
+ * @throws {Error} Se si verifica un errore durante il recupero dei post.
+ */
 const fetchPosts = async () => {
     try {
         const response = await axios.get('https://22hbg.com/wp-json/wp/v2/posts/');
@@ -30,7 +37,7 @@ const fetchPosts = async () => {
  *             schema:
  *               type: array
  *               items:
- *                 $ref: '#/components/schemas/Post'
+ *
  *       500:
  *         description: Internal Server Error
  */
@@ -70,7 +77,7 @@ app.get('/posts', async (_req, res) => {
  *             schema:
  *               type: array
  *               items:
- *                 $ref: '#/components/schemas/Post'
+ *
  *       500:
  *         description: Internal Server Error
  */

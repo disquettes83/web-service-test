@@ -5,6 +5,7 @@ import express, { Request, Response } from 'express';
 import { swaggerDocs } from './swagger.js';
 import axios from 'axios';
 import { Redis } from 'ioredis';
+import { connectToDatabase, getDatabase } from './database.js';
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -112,6 +113,8 @@ app.get('/posts-filtered', async (req: Request, res: Response) => {
     res.status(500).json({ error: 'Failed to fetch posts' });
   }
 });
+
+
 
 /**
  * @swagger
