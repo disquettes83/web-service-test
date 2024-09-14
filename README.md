@@ -42,3 +42,6 @@ Questo è un progetto di web service sviluppato in Node.js utilizzando TypeScrip
 
 ## Configurazione
 - Il server utilizza Redis come sistema di cache. Assicurati che Redis sia installato e in esecuzione sul tuo sistema.
+
+
+***Edit per test log***
